@@ -16,6 +16,7 @@ const routes = [
     name: "ModifierProjet",
     component: ModifierProjet,
   },
+  
   { path: '/', redirect: '/tasks', },
   { path: '/tasks', name: 'TaskList', component: TaskList },
   { path: '/tasks/:id', name: 'TaskDetails', component: TaskDetails, props: true },
