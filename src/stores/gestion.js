@@ -1,10 +1,13 @@
 // gestion.js
 import { defineStore } from 'pinia';
-import DetailProjet from '../components/projet/DetailProjet.vue';
 
 export const useGestionStore = defineStore('gestion', {
   state: () => ({
-    projets: [],
+    projets:  [{ id: '1', nom: 'Projet 1', dateDebut: '2024-08-01', dateFin: '2024-08-10' },
+        { id: '2', nom: 'Projet 2', dateDebut: '2024-08-15', dateFin: '2024-08-20' }],
+        
+      
+
     tasks: [],
     
   }),
@@ -26,11 +29,7 @@ export const useGestionStore = defineStore('gestion', {
      return this.projets.find(projet => projet.id === id);
           
     },
-    getProjetById(id) {
-      return this.projets.find(projet => projet.id === id);
-    },
-   }
-});
+    
 
     getProjetById(id) {
       return this.projets.find(projet => projet.id === id);
