@@ -19,6 +19,7 @@
           <td>
             <router-link :to="'/modifier-projet/' + projet.id" class="btn btn-warning btn-sm">Modifier</router-link>
             <button @click="supprimerProjet(projet.id)" class="btn btn-danger btn-sm">Supprimer</button>
+            <router-link :to="`/detail-projet/${projet.id}`" class="btn btn-info">Détail</router-link>
           </td>
         </tr>
       </tbody>
