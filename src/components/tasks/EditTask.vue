@@ -1,4 +1,4 @@
-<!-- EditTask.vue -->
+
 <template>
     <div>
       <h2>Modifier la Tâche</h2>
@@ -19,12 +19,7 @@
           <label for="dateFin" class="form-label">Date de fin</label>
           <input v-model="dateFin" type="date" class="form-control" id="dateFin" required>
         </div>
-        <!-- <div class="mb-3">
-          <label for="projet" class="form-label">Projet</label>
-          <select v-model="projet" class="form-control" id="projet" required>
-            <option v-for="proj in projects" :key="proj" :value="proj">{{ proj }}</option>
-          </select>
-        </div> -->
+
         <button type="submit" class="btn btn-primary">
           <i class="fas fa-check"></i> Mettre à jour
         </button>

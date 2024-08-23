@@ -31,3 +31,28 @@ export const useGestionStore = defineStore('gestion', {
     },
    }
 });
+
+    getProjetById(id) {
+      return this.projets.find(projet => projet.id === id);
+    },
+    addTask(task) {
+      this.tasks.push(task);
+    },
+    updateTask(updatedTask) {
+      const index = this.tasks.findIndex(t => t.id === updatedTask.id);
+      if (index !== -1) this.tasks[index] = updatedTask;
+    },
+    deleteTask(taskId) {
+      this.tasks = this.tasks.filter(task => task.id !== taskId);
+    },
+    getTaskById(taskId) {
+      return this.tasks.find(task => task.id === taskId);
+    },
+    addProject(project) {
+      this.projets.push(project);
+    },
+    getProjects() {
+      return this.projets;
+    },
+    },
+    });
